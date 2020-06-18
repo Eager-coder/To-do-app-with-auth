@@ -1,0 +1,102 @@
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  width: 100%;
+  max-width: 1200px;
+  height: 4rem;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+header nav .logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: #f85b3f;
+}
+
+header nav a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+header nav a:hover {
+  border-bottom: 2px black solid;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+main .text {
+  margin-top: 80px;
+  width: 50%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .text span {
+  font-size: 3.7rem;
+  font-weight: 600;
+}
+
+main .text a {
+  display: block;
+  margin-left: 10px;
+  width: 180px;
+  height: 60px;
+  background-color: coral;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+main img {
+  width: 50%;
+}
+/*# sourceMappingURL=welcome.css.map */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/tasks.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Todo</div>
+
+            <a href="/users/logout">Log out</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your tasks</h2>
+        <div class="input">
+            <input type="text" placeholder="New task">
+            <button id="submit">+</button>
+        </div>
+
+        <div class="tasks">
+            <% if (tasks) { %>
+            <% for (task of tasks) { %>
+            <div class="task">
+                <li><%=task.task%></li>
+                <button class="delete-task" id="<%=task._id%>">&#215</button>
+            </div>
+            <% } %>
+            <% } %>
+        </div>
+    </main>
+    <script>
+        const input = document.querySelector('input')
+        const btn = document.getElementById('submit')
+        const taskList = document.querySelector('.tasks')
+
+        window.addEventListener('click', (e) => {
+            if (e.target.className === 'delete-task') {
+                e.target.parentElement.remove()
+                fetch('http://localhost/tasks/delete/' + e.target.id, {
+                    method: 'GET'
+                })
+                    .then(res => console.log(res))
+                    .catch(err => console.log(err))
+            }
+        })
+        input.addEventListener('keypress', (e) => {
+            if (e.key == "Enter") {
+                if (input.value.trim() !== '') {
+                    addTask()
+                }
+            }
+        })
+        btn.addEventListener('click', () => {
+            if (input.value.trim() !== '')
+                addTask()
+        })
+        const addTask = () => {
+            const newTask = { task: input.value }
+            if (newTask.task.trim() !== '' || newTask.task.trim() !== undefined || newTask.task.trim() !== null) {
+                input.value = ''
+                console.log(newTask.task)
+                fetch('http://localhost/tasks', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(newTask)
+                })
+                    .then(res => res.json())
+                    .then(data => renderTask(data))
+                    .catch(err => console.log(err))
+            }
+        }
+        const renderTask = (data) => {
+            const newTask = document.createElement('div')
+            newTask.className = 'task'
+            newTask.innerHTML = `
+                <li>${data.task}</li>
+                <button class="delete-task" id="${data._id}">&#215</button>`
+            taskList.appendChild(newTask)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  width: 100%;
+  max-width: 1200px;
+  height: 4rem;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+header nav .logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: #f85b3f;
+}
+
+header nav a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px black solid;
+}
+
+main {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+main .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 450px;
+  height: 40px;
+}
+
+main .input input {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border: 2px black solid;
+  border-radius: 3px;
+  padding-left: 20px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+main .input #submit {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 2px #f85b3f solid;
+  border-radius: 3px;
+  color: #f85b3f;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+main .tasks {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+main .task {
+  margin: 10px 0;
+  width: 440px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1.5px black solid;
+}
+
+main .task li {
+  list-style: none;
+  font-size: 1.1rem;
+  padding-left: 15px;
+}
+
+main .task .delete-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  background-color: #c90202;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+/*# sourceMappingURL=tasks.css.map */
