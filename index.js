@@ -10,7 +10,7 @@ require('dotenv').config()
 require('./config/passport')(passport)
 
 // DB config
-const db = process.env.MONGO_URI
+const db = process.env.MONGO_URI.toString()
 console.log(db)
 
 //Connect to Mongo
