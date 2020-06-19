@@ -10,7 +10,7 @@ const path = require('path');
 require('./config/passport')(passport)
 
 // DB config
-const db = require('./config/keys').MongoURI
+const db = process.env.MONGO_URI
 
 //Connect to Mongo
 mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
