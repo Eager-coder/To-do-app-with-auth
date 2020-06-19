@@ -3,6 +3,14 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
 header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -30,17 +38,18 @@ header nav .logo {
   color: white;
   padding: 0 10px;
   border-radius: 4px;
+  text-decoration: none;
   background-color: #ff4f5a;
 }
 
-header nav a {
+header nav .links a {
   font-size: 1.2rem;
   color: black;
   text-decoration: none;
   margin: 0 5px;
 }
 
-header nav a:hover {
+header nav .links a:hover {
   border-bottom: 2px black solid;
 }
 
