@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const { ensureAuth } = require('../config/auth')
 const Task = require('../models/Task')
-router.get('https://git.heroku.com/turan-todo-app.git/', (req, res) => res.render('welcome'))
+router.get('/', (req, res) => res.render('welcome'))
 
 
 router.get('/tasks', ensureAuth, (req, res) => {
