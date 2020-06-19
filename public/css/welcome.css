@@ -9,6 +9,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
+  outline: none;
 }
 
 header {
@@ -66,6 +67,7 @@ main {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+  padding: 0 30px;
 }
 
 main .text {
@@ -110,7 +112,41 @@ main .text a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1000px) {
+  main .text {
+    height: 300px;
+  }
+  main .text span {
+    font-size: 2.7rem;
+  }
+}
+
 main img {
   width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .text, main img {
+    width: 100%;
+  }
+  main .text {
+    margin: 0;
+  }
+  main .text span {
+    margin-top: 40px;
+    text-align: center;
+  }
+  main .text a {
+    margin-top: 20px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 /*# sourceMappingURL=welcome.css.map */
