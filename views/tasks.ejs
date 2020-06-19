@@ -42,7 +42,7 @@
         window.addEventListener('click', (e) => {
             if (e.target.className === 'delete-task') {
                 e.target.parentElement.remove()
-                fetch('http://localhost/tasks/delete/' + e.target.id, {
+                fetch('https://turan-todo-app.herokuapp.com/tasks/delete/' + e.target.id, {
                     method: 'GET'
                 })
                     .then(res => console.log(res))
@@ -65,7 +65,7 @@
             if (newTask.task.trim() !== '' || newTask.task.trim() !== undefined || newTask.task.trim() !== null) {
                 input.value = ''
                 console.log(newTask.task)
-                fetch('http://localhost/tasks', {
+                fetch('https://turan-todo-app.herokuapp.com/tasks', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(newTask)
