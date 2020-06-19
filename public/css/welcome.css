@@ -25,7 +25,7 @@ header nav .logo {
   color: white;
   padding: 0 10px;
   border-radius: 4px;
-  background-color: #f85b3f;
+  background-color: #ff4f5a;
 }
 
 header nav a {
@@ -80,7 +80,7 @@ main .text a {
   margin-left: 10px;
   width: 180px;
   height: 60px;
-  background-color: coral;
+  background-color: #ff4f5a;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;

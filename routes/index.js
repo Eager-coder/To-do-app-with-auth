@@ -7,7 +7,7 @@ router.get('/', (req, res) => res.render('welcome'))
 
 router.get('/tasks', ensureAuth, (req, res) => {
     Task.find({owner: req.user._id}, (err, tasks) => {
-        res.render('tasks', { tasks })
+        res.render('tasks', { title: 'Tasks', tasks })
     })
 })
 router.post('/tasks', ensureAuth, (req, res) => {

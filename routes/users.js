@@ -5,10 +5,10 @@ const User = require('../models/User')
 const passport = require('passport')
 
 // Login page 
-router.get('/login', (req, res) => res.render('login'))
+router.get('/login', (req, res) => res.render('login', {title: 'Log in'}))
 
 // Register page 
-router.get('/register', (req, res) => res.render('register'))
+router.get('/register', (req, res) => res.render('register', {title: 'Register'}))
 
 // Registering
 router.post('/register', (req, res) => {
